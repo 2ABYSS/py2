@@ -1,0 +1,64 @@
+ad = "lebron "
+soyad = "james"
+yas = 38 
+print("benim adım ", ad,soyad ,"yasim" , yas, "hosgeldin")
+
+karsilama= "benim adım " + ad + ' ' + soyad +' ' + "yasim" + ' ' + str(yas) + ' ' +  "hosgeldin"
+print(karsilama)
+
+uzunluk = len(karsilama)
+print(uzunluk)
+
+
+print(karsilama[3])
+#print(uzunluk-1)
+print(karsilama[uzunluk-1])
+
+# print(karsilama[4:10])
+# print(karsilama[0:10])
+# print(karsilama[:24])
+# print(karsilama[10:])
+# print(karsilama[2:10:5])
+# print(karsilama[:-3])
+# print(karsilama[::-1])
+
+karsilama_upper= karsilama.upper()
+print(karsilama_upper)
+
+
+
+karsilama_split= karsilama.split()
+print(karsilama_split)
+print(karsilama_split[5])
+
+
+
+karsilama_join="-".join(karsilama)
+print(karsilama_join)
+
+
+karsilama_find= karsilama.find("lebron")
+print(karsilama_find)
+
+
+karsilama_startwith =karsilama.startswith("l")
+print(karsilama_startwith)
+
+
+
+karsilama_endwite= karsilama.endswith("n")
+print(karsilama_endwite)
+
+
+karsilama_replace= karsilama.replace("lebron", "curry")
+print(karsilama_replace)
+
+
+
+
+
+
+
+
+
+
