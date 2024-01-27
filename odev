@@ -1,0 +1,165 @@
+#Kullanıcıdan bir cümle alın, cümlenin başındaki ve sonundaki boşlukları kaldırın, ardından tüm harfleri küçük harfe çevirin.
+
+cümle = input("cumle giriniz:")
+bosluksuz_cümle = cümle.strip()
+kucukharf = bosluksuz_cümle.lower()
+print("girdiğiniz cümle:", kucukharf)
+
+#Bir string içinde belirli bir karakterin kaç kez geçtiğini sayın.
+
+string  = input("metin giriniz:")
+bulmak_istediginiz_karakter = input("karakter gir")
+sayac = string.count(bulmak_istediginiz_karakter)
+print(f"{bulmak_istediginiz_karakter}karakteri {sayac} kez geçiyor. ")
+
+#Kullanıcıdan bir kelime ve bir harf alın, kelimenin içindeki o harfi kaç kez içerdiğini kontrol edin.
+
+kelime = input("kelime gir:")
+harf = input("harf gir:")
+sayac = kelime.count(harf)
+print(f"'{harf} harfi , {kelime}'kelimesinde {sayac} kez geçiyor.")
+
+#İki string'i birleştirin ve ardından bir substring arayın ve konumunu bulun.
+
+isim1 = "yusuf"
+isim2 = "tunahan" 
+birlesmis_isimler = isim1 + " " + isim2
+print(birlesmis_isimler)
+karsilama = isim1 + " " + isim2
+print(karsilama)
+print(karsilama[5:11])
+
+#Kullanıcıdan bir cümle alın ve cümlenin içindeki kelimeleri alfabetik sıraya göre sıralayın.
+
+cümle = input("bir cümle giriniz:")
+kelimeler = cümle.split()
+kelimeler.sort()
+print("alfabetik siraya gore sıralanmiş kelimeler:", kelimeler)
+
+#Kullanıcıdan iki string alın, bu stringleri birleştirin ve tüm karakterleri küçük harfe çevirin.
+
+string1 = input("string gir:")
+string2 = input("string gir:")
+birleştirme= string1+' '+string2
+kucuk_harf = birleştirme.lower()
+print(kucuk_harf)
+
+#Bir string içinde belirli bir alt dizeyi (substring) arayın ve yerine başka bir alt dize ekleyin.
+
+stringim = "Bugün hava çok güzel."
+
+aranan_alt_dize = "hava"
+eklenecek_alt_dize = "hava gerçekten"
+
+yenı_string = stringim.replace(aranan_alt_dize, eklenecek_alt_dize)
+
+print("Yeni string:", yenı_string)
+
+
+#Kullanıcıdan bir kelime alın ve kelimenin içindeki tüm 'a' harflerini '@' ile değiştirin.
+
+def a_harfi_degistir(kelime):
+    yeni_kelime = kelime.replace('a', '@')
+    return yeni_kelime
+
+kelime = input("kelime gir: ")
+sonuc = a_harfi_degistir(kelime)
+print("Sonuç:", sonuc)
+
+#Kullanıcıdan bir kelime alın ve kelimenin palindrome (tersinden de okunduğunda aynı olan) olup olmadığını kontrol edin.
+
+def is_palindrome(word):
+    # Kelimenin ters çevrilmiş hali ile kendisi karşılaştırılır
+    return word == word[::-1]
+
+# Kullanıcıdan kelimeyi al
+user_word = input("Lütfen bir kelime girin: ")
+
+# Palindrom kontrolü yapılır
+if is_palindrome(user_word):
+    print(f"{user_word} bir palindromdur.")
+else:
+    print(f"{user_word} bir palindrom değildir.")
+    
+
+#Kullanıcıdan bir cümle alın, cümlede geçen kelimelerin içinde en uzun olanını bulun.
+  
+cumle = input("cumle giriniz:")
+kelimeler = cumle.split()
+en_uzun_kelime = max(kelimeler, key=len)
+print("en uzun kelime:", en_uzun_kelime) 
+
+#Bir liste oluşturun ve listenin ortasındaki elemanı bulun.
+
+liste = [1,2,3,4,5,6,7]
+orta_sayi1 = liste[len(liste) // 2]
+orta_sayi2 = liste[len(liste) // 2 - 1]
+print("ortasındaki sayi:", orta_sayi1, orta_sayi2)
+
+
+#Bir tuple oluşturun, tuplein 2. ve 4. elemanlarını yeni bir tuple olarak alın.
+
+tuple = (1,2,3,4,5,6,7)
+alt_tuple= tuple[2:4]
+print(alt_tuple)
+
+#Bir set oluşturun, set içine bir sayı ekleyin, ardından bu sayıyı setden çıkarın.
+
+set1 = {12}
+set1.remove(12)
+print(set1)
+
+#Bir dictk oluşturun, dicte yeni bir anahtar-değer çifti ekleyin, ardından bir anahtarı silin.
+
+dict = {"anahtar1": "deger1","anahtar2" : "deger2"}
+del dict["anahtar1"]
+print(dict)
+
+#Bir liste oluşturun, listenin ortasına yeni bir sayı ekleyin.
+
+liste = [1,2,3,4,5,6]
+orta_index = len(liste) // 2  
+liste.insert(orta_index, 10)
+print(liste)
+
+#Bir liste oluşturun ve listenin ortasındaki elemanı bir tuplee ekleyin.
+
+liste = [1,2,3,4,5,6]
+tuple = 100 
+orta_index = len(liste) // 2  
+liste.insert(orta_index, tuple)
+print(liste)
+
+#Bir set oluşturun ve setin elemanlarını içeren bir liste oluşturun, ardından bu liste elemanlarının toplamını hesaplayın.
+
+set = {10,20,30,40,50}
+list = list(set)
+toplam =sum(list)
+print("liste elemanlarin toplamı:", toplam)
+
+#Bir dict oluşturun ve dictin içindeki string türündeki değerlerin karakter sayılarının toplamını bulun.
+
+dict = {  "ad": "Yusuf", "yas":  17 , "sehir" : "karabuk" }
+ 
+toplam_karakter = 0
+ 
+for deger in dict.values():
+    if isinstance(deger, str):
+        toplam_karakter += len(deger) 
+
+print("string turundeki karakterlerin toplamı", toplam_karakter)     
+
+
+#Bir liste oluşturun ve listenin içindeki en büyük sayıyı bulun, ancak sadece aritmetik operatörler (+, -, *, /) kullanmadan yapın.
+
+liste = [2,5,7,5,9,12]
+en_buyuk_sayi = max(liste)
+print("en buyuk sayi:", en_buyuk_sayi)
+
+#Bir dict oluşturun ve dictin içindeki string türündeki değerlerin hepsini birleştirerek tek bir string elde edin.
+
+dict = {"anahtar1": "deger1","anahtar2" : "deger2"}
+
+birlesmis_string = ''.join(dict.values())
+
+print("Birleştirilmiş string:", birlesmis_string)
