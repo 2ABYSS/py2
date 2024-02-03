@@ -1,0 +1,165 @@
+# numbers= (55,60,65)
+# # print(type(numbers))
+# num1,num2,num3=numbers
+# print(num2)
+
+
+
+
+# a,b,c,d= 50,100,50,75
+
+# sonuc=(a>b)
+# print(sonuc)
+
+# sonuc=(a==c)
+# print(sonuc)
+
+# sonuc=(a<d)
+# print(sonuc)
+
+# sonuc=(a!=c)
+# print(sonuc)
+
+
+# username1="ceku"
+# username2="arif"
+# sonuc = (username1=="arif")
+# print("Eşleme sunucu,,,:",sonuc)
+# sonuc = (username2=="arif")
+# print("Eşleme sunucu,,,:",sonuc)
+
+# print("A,R,O,G'a hoş geldiniz.\n")
+# username_input=input("bir kullanıcı adı giriniz: ")
+
+# sonuc = (username1.lower()==username_input.lower())
+# sonuc2 = (username2.lower()==username_input.lower())
+
+# sonuc3=(sonuc != sonuc2)
+# print("Eşleme sunucu,,,:",sonuc3)
+
+
+# database = {
+#     1 : {
+#         'eposta' : 'babapro31@gmail.com',
+#         'sifre' : '12345'
+#     },
+#     2 : {
+#         'eposta' : 'babalarsozunututar@gmail.com',
+#         'sifre' : '5678'
+#     }
+# } 
+
+# eposta_input = input("eposta giriniz:")
+# sifre_input = input("sifre giriniz:")
+
+# sonuc = (eposta_input== database[1]['eposta'])
+# sonuc2 = (eposta_input== database[2]['eposta'])
+# sonuc3=(sonuc | sonuc2 )
+# print(sonuc3)
+# sonuc4= (sifre_input== database[1]['sifre'])
+# sonuc5 = (sifre_input== database[2]['sifre'])
+# sonuc6=(sonuc4 | sonuc5 )
+# print(sonuc6)
+
+
+
+# fruits = ["elma","muz","portakal","kivi"]
+
+# print("kiraz" in fruits )
+
+
+# x = y = [10,20,30]
+
+# z = [10,20,30]
+
+# print(x is y )
+# print(x is z )    
+# print(x == z )
+
+
+# vize_notu =float(input("vize notunu giriniz:"))
+# final_notu =float (input("final notunu giriniz:"))
+
+# vize_notunun_yuzde_kırkı = 0.40
+# final_notu_yuzde_altmısı = 0.60
+
+# notun40 = vize_notu *vize_notunun_yuzde_kırkı
+# final60 = final_notu * final_notu_yuzde_altmısı
+# ortalama = notun40+final60
+# print(ortalama)
+
+# sayi1 = int(input("sayi giriniz:"))
+# result = (sayi1 > 0 ) and (sayi1 % 2 == 0)
+# print("girilen sayi çift sayi mı:"+ str(result))
+
+# x = 98
+# y = 98
+ 
+# if (x > y):
+#     #<eger kosul dogru (true) ise calisacak kodlar>
+#     print("en buyuk sayi....:", x)
+
+# elif(x==y):
+#     print("sayilar eşisttir")
+
+# else:
+#     #<eger kosul yanlis (false) ise kodlar calisacak>
+#     print("en buyuk sayi...:", y)
+
+
+
+# kullanici_takım = input("takım adı giriniz:")
+
+# if kullanici_takım =="lakers":
+#     print("en sevdigin takımın renkleri: sari ve mavi")
+
+# elif kullanici_takım == "golden state":
+#     print("en sevdigin takımın renkleri: sari ve açık mavi")
+
+# elif kullanici_takım == "bulls":
+#     print("en sevdigin takımın renkleri: kırmızı ve beyaz")
+
+# else:
+
+
+# dogru_kullanici = "yusuf"
+# dogru_sifre = "1234"
+
+# kullanici_ad = input("kullanıcı adınızı giriniz:")
+# sifre = input("sifrenizi giriniz:")
+
+# if kullanici_ad == dogru_kullanici and sifre == dogru_sifre:
+#     print("giriş başarılı....")
+
+# else :
+#     print("giris basarisiz...")
+
+# if kullanici_ad == dogru_kullanici and sifre != dogru_sifre:
+#     print("kullaniciad dogru , sifre yanlis")
+# else:
+#     print("giris basarısız...")
+
+# if kullanici_ad != dogru_kullanici and sifre == dogru_sifre :
+#     print("kullaniciad yanlis, sifre dogru")
+# else:
+#     print("giris basarısız....")
+
+
+
+
+islem = int(input("işlem seç \n1-toplma\n2-çıkarma\n3-çarpma\n4-bolme\n"))
+sayi1 = int(input("sayi giriniz .. \n"))
+sayi2 = int(input("sayi giriniz .. \n"))
+
+if islem == 1:
+    result = sayi1+sayi2 
+elif islem == 2: 
+    result = sayi1-sayi2 
+elif islem == 3:
+    result = sayi1*sayi2
+elif islem == 4:
+    result = sayi1/sayi2
+print(result)
+    
+
+
