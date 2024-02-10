@@ -1,0 +1,167 @@
+
+
+
+def selamdunya():
+    print("hello world")
+
+
+selamdunya()
+
+
+
+
+
+def hosgeldin(name):
+    print("hosgeldin " +name) 
+    
+hosgeldin(input('isminizi giriniz:'))
+
+'''
+'''
+
+def fonksiyon(sehir = "konya"):
+    print("en sevdigin şehir " + sehir)
+
+fonksiyon("istanbul")
+fonksiyon()
+
+
+
+
+def sayi(x):
+    x = x+5
+    return x
+
+sonuc = sayi(10)
+print(sonuc)
+
+
+
+
+def sayi(x,y):
+    return x + y
+
+
+print(sayi(8,10))
+
+
+
+
+
+def fonk_tuple(*argv):
+    for arg in argv:
+        print(arg)
+
+fonk_tuple("selam", "naber","nasılsın","iyidir")
+
+
+
+def listele(sayi1):
+    cift_sayi = []
+    for i in  range(2,sayi1+1,2):
+        cift_sayi.append(i)
+    return cift_sayi
+        
+
+sayi1 = (int(input("sayi gir:")))
+cift_sayi_list = listele(sayi1)
+print(cift_sayi_list)
+
+
+
+def toplam(num1+num2)
+print(num1+num2)
+
+devam_etsinmi= True
+while (devam_etsinmi):
+print("*-*-*-*-*-*-*-*-*--*-*-*-*-*-**-hosgeldiniz*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-")
+
+print("toplama için 1")
+print("çıkarma için 2")
+print("çarpma için 3")
+print("bolme için 4")
+print("çıkmak için 5")
+secenek = int(input("tercih yap"))
+
+if (secenek==1):
+    num1=int(input("1. sayiyi giriniz"))
+    num2=int(input("2. sayiyi giriniz"))
+    print(num1+num2)
+    
+elif(secenek==2):
+    print(num1-num2)
+
+elif(secenek==2):
+    print(num1*num2)
+
+elif(secenek==3):
+    print(num1-num2)
+
+elif(secenek==4):
+    print(num1/num2)
+
+elif(secenek==5):
+    devam_etsinmi=False
+
+else:
+    print("gecerli sayi gir.........")
+
+
+
+def toplam(sayi1,sayi2):
+    print(sayi1+sayi2)
+
+def cıkartma(sayi1,sayi2):
+    print(sayi1-sayi2)
+
+def carpma(sayi1,sayi2):
+    print(sayi1*sayi2)
+
+def bolme(sayi1,sayi2):
+    print(sayi1/sayi2)
+ 
+devam_etsinMi = True
+
+
+
+while devam_etsinMi :
+
+    print("Toplama için 1")
+    print("Çıkarma için 2")
+    print("Çarpma için 3")
+    print("Bölme için 4")
+    print("Çıkmak için 5")
+    islem = int(input("Lütfen yapmak istediğiniz işlemin numarasını giriniz"))
+    if islem == 1:
+        sayi1=float(input("ilk sayıyı giriniz"))
+        sayi2=float(input("ikinci sayıyı giriniz"))
+        print("Sonuç ",toplam(sayi1,sayi2))
+    elif islem==2:
+        sayi1=float(input("çıkaracağınız ilk sayıyı giriniz"))
+        sayi2=float(input("çıkaracak sayıyı giriniz"))
+        cıkartma(sayi1,sayi2)
+    elif islem==3:
+        sayi1=float(input("carptığınız ilk sayıyı giriniz"))
+        sayi2=float(input("iki sayıyı giriniz"))
+        sonuc=carpma(sayi1,sayi2)
+        print("Carpmadan elde edilen sonuç",sonuc)
+    elif islem==4:
+        sayi1=float(input("bölenlerden birini giriniz"))
+        sayi2=float(input("diğer böleni giriniz"))
+        if sayi2!=0:
+            print("Bir sayı sıfıra bölünebilir.")
+        else:
+            print("Sonuç",sayi1/sayi2)
+    else:
+        devam_etsinMi = False     
+
+   
+
+
+def factorie (sayi1):
+    if sayi1 ==0:
+        return 1
+    else:
+        return sayi1*factorie(sayi1-1)
+    
+print(sayi1,"faktoriyel",(sayi1))
