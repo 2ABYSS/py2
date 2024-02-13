@@ -1,0 +1,148 @@
+# 1)Bir fonksiyon oluşturun. Emeklilik yaşını 65 olarak belirleyin. Kullanıcıdan yaşını alıp 65 yaş altındakilere emekliliğine kaç yıl kaldığını
+# 65 yaş üstüne zaten emekli olduğunu ekrana yazdırın.
+
+def emekli_yas(dogum_yili):
+    emekli_yas = 65
+    emekli_yasa_kalma =  emekli_yas - (2024 - dogum_yili   )
+    if emekli_yasa_kalma > 0:
+        return f"emekli olmaniza{emekli_yasa_kalma} yıl kaldı."
+    elif emekli_yasa_kalma == 0:
+        return "bu yıl emekli olabilirsin"
+    else:
+        return "zaten emeklisin"
+
+yas = int(input("yas gir"))
+
+
+# 2)Bir fonksiyon oluşturun.Fonksiyon kullanıcıdan iki sayı alıp bu iki sayı arasındaki asal sayıları ekrana bastırın.
+
+
+def asal_sayilari_bul(sayi1, sayi2):
+    asal_sayilar = []
+
+    for sayi in range(sayi1, sayi2 + 1):
+        if sayi > 1:
+            for i in range(2, sayi):
+                if (sayi % i) == 0:
+                    break
+            else:
+                asal_sayilar.append(sayi)
+
+    if len(asal_sayilar) > 0:
+        print(f"{sayi1} ile {sayi2} arasındaki asal sayılar:")
+        for asal_sayi in asal_sayilar:
+            print(asal_sayi)
+    else:
+        print(f"{sayi1} ile {sayi2} arasında asal sayı bulunmamaktadır.")
+
+
+sayi1 = int(input("İlk sayıyı girin: "))
+sayi2 = int(input("İkinci sayıyı girin: "))
+
+
+asal_sayilari_bul(sayi1, sayi2)
+
+
+# 3)İki fonksiyon oluşturun. İki fonksiyon içinde de listeler olsun ilk fonksiyon içindeki listenin en büyük sayısını ikinci fonksiyon içindeki
+# # listenin en küçük sayısını toplayıp ekrana bastırın.
+
+
+def en_buyuk_sayi(liste):
+    return max(liste)
+
+def en_kucuk_sayi(liste):
+    return min(liste)
+
+def topla_en_buyuk_ve_en_kucuk(liste1, liste2):
+    buyuk_sayi = en_buyuk_sayi(liste1)
+    kucuk_sayi = en_kucuk_sayi(liste2)
+    toplam = buyuk_sayi + kucuk_sayi
+    print("En büyük sayı ile en küçük sayının toplamı:", toplam)
+
+
+liste1 = [10, 20, 30, 40, 50]
+liste2 = [5, 15, 25, 35, 45]
+topla_en_buyuk_ve_en_kucuk(liste1, liste2)
+
+
+
+# 4)Bir fonksiyon oluşturun. Fonksiyon içinde bir tane liste olsun ve bu listenin ilk ve son sayısı eşitse ekrana true değilse false yazdırsın.
+
+def ilk_ve_son_esit_mi(liste):
+    if len(liste) < 2:
+        print("Listede yeterli sayıda eleman yok.")
+    elif liste[0] == liste[-1]:
+        print("True")
+    else:
+        print("False")
+
+
+liste1 = [1, 2, 3, 4, 1]
+liste2 = [5, 6, 7, 8, 9]
+liste3 = [10]
+
+ilk_ve_son_esit_mi(liste1)  
+ilk_ve_son_esit_mi(liste2)  
+ilk_ve_son_esit_mi(liste3)  
+
+
+
+# 5)Bir sayının palindrom sayı olup olmadığını kontrol eden fonksiyonu yazınız.
+
+def palindrom_mu(sayi):
+    sayi_str = str(sayi)
+    ters_sayi_str = sayi_str[::-1]
+    if sayi_str == ters_sayi_str:
+        return True
+    else:
+        return False
+
+
+sayi1 = 121
+sayi2 = 12321
+sayi3 = 12345
+
+print(palindrom_mu(sayi1))  
+print(palindrom_mu(sayi2))   
+print(palindrom_mu(sayi3))  
+
+
+
+# 6)Bir fonksiyon oluşturun. Fonksiyon içinde iki liste olsun ilk listenin çift sayılarını ikinci listenin tek sayılarını alıp yeni bir listeye ekleyin ve ekrana yazdırın.
+
+
+def cift_ve_tek_ayir(liste1, liste2):
+    ciftler = [x for x in liste1 if x % 2 == 0]
+    tekler = [x for x in liste2 if x % 2 != 0]
+    yeni_liste = ciftler + tekler
+    return yeni_liste
+
+
+liste1 = [1, 2, 3, 4, 5]
+liste2 = [6, 7, 8, 9, 10]
+sonuc_listesi = cift_ve_tek_ayir(liste1, liste2)
+print(sonuc_listesi)
+
+
+# 7)Rus ruleti oyunu yazın. Random kütüphanesi kullanarak 1-6 arasında bir sayı seçilsin ve kullanıcıdan bir sayı alsın eşit olduğunda oyun biter.
+# 2 fonksiyon kullanarak yazabilirsiniz.
+
+import random
+
+def rus_ruleti():
+    return random.randint(1, 6)
+
+def oyun():
+    while True:
+        kullanici_tahmini = int(input("Tahmininizi girin (1-6 arası bir sayı): "))
+        bilgisayar_tahmini = rus_ruleti()
+        print("Bilgisayarın tahmini:", bilgisayar_tahmini)
+        
+        if kullanici_tahmini == bilgisayar_tahmini:
+            print("Tebrikler! Doğru tahmin ettiniz. Oyun bitti.")
+            break
+        else:
+            print("Üzgünüm, yanlış tahmin ettiniz. Tekrar deneyin.")
+
+
+oyun()
