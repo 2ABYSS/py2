@@ -1,0 +1,152 @@
+open("yenidosya.txt","w")
+
+
+"w" write -> yazma modu , dosya yoksa olusturur icerigi silip ekleme yapar 
+"a" Append -> ekleme modu olarak calısır 
+"x" create -> olusturma modu , aynısı varsa hata verir 
+"r" read -> okuma modu 
+
+
+
+file_dizin = open("C:/Users/moham/OneDrive/Belgeler/sibervatan/yenidosya.txt","w"),
+
+
+
+
+
+try:
+    file = open("yenidosya2.txt","x")
+except FileNotFoundError:
+    print("dosya zaten var")
+finally:
+    print("dosya kapandı")
+
+
+file.close()
+
+
+file = open("yenidosya.txt","a",encoding='utf-8')
+file.write("YUSUFi")
+file.close()
+file = open("yenidosya.txt","a",encoding='utf-8')
+file.write("\nlebron james")
+file.close()
+
+for i in file:
+     print(i, end="")
+icerik = file.read()
+print(icerik)
+
+icerik_karakter = file.read(0)
+icerik_karakter = file.read(3)
+print(icerik_karakter)
+print("############")
+
+
+file = open("yenidosya.txt","r", encoding='utf-8')
+# print(file.readline(),end="")
+# print(file.readline(),end="")
+
+
+liste = file.readlines()
+print(liste)
+print(liste[0])
+print(liste[1])
+file.close()
+
+
+"""""""""
+with open("yenidosya.txt","r",encoding='utf-8') as file:
+    content = file.read()
+    print(content)
+    file.seek(3)
+    print(file.tell())
+    content2 = file.read()
+    print(content2)
+    
+
+with open("yenidosya.txt","r+",encoding='utf-8') as file:
+    file.seek(3)
+    file.write("siber vatan")
+"""""""""
+
+
+"""""""""""
+index = 1
+citylist = ["karabük","bayburt","izmir"]
+with open("yenidosya.txt", "a", encoding='utf-8') as file:
+    for i in citylist:
+        if index ==len(citylist):
+            file.write(i)
+        else:
+            file.write(i+"\n")
+        index+=1
+
+
+
+
+
+import math as islem
+
+sonuc = islem.sqrt(5)
+print(sonuc)
+
+
+sonuc1 = islem.factorial(5)
+print(sonuc1)
+
+from math import *
+
+print(factorial(5))
+print(sqrt(5))
+print(factorial(5))
+
+import random 
+
+sayilar=[0,1,2,3,4,5,6,7,8]
+list=""
+i = 0
+
+while i!=6:
+    list+=str(sayilar[random.randint(0,len(sayilar)-1)])
+    i+=1
+print(list)
+
+import random 
+
+sayilar=[0,1,2,3,4,5,6,7,8]
+list=""
+i = 0
+
+while i!=6:
+    list+=str(random.choice(sayilar))
+    i+=1
+print(list)
+
+import random 
+
+sayilar=[0,1,2,3,4,5,6,7,8]
+list=[]
+i = 0
+
+while i!=6:
+    list.append(random.choice(sayilar))
+    i+=1
+
+
+
+print("before shuffle")
+print(list)
+random.shuffle(list)
+print("after shuffle")
+print(list)
+
+
+import sibervatan
+
+sayi = sibervatan.sayilar[2]
+print(sayi)
+
+
+sayi2 = sibervatan.number
+print(sayi2)
