@@ -1,0 +1,122 @@
+"""""""""
+def saatlik_calisma_ucreti(toplam_calisma_suresi, toplam_calisma_gunu, saatlik_ucret, kapasite):
+    if toplam_calisma_suresi <= kapasite:
+        ucret = toplam_calisma_suresi * saatlik_ucret
+    else:
+        normal_calisma_suresi = toplam_calisma_suresi - kapasite
+        ucret = kapasite * saatlik_ucret + normal_calisma_suresi * saatlik_ucret
+    return ucret
+
+saatlik_ucret = 50
+kapasite = 40
+
+toplam_calisma_suresi = float(input("Toplam çalışma süresi: "))
+toplam_calisma_gunu = int(input("Toplam çalışma günü: "))
+
+ucret = saatlik_calisma_ucreti(toplam_calisma_suresi, toplam_calisma_gunu, saatlik_ucret, kapasite)
+print("Toplam ödenecek ücret:", ucret, "TL")
+"""""""""
+
+
+def hesaplamasaatlik(toplam_çalişma_saati):
+    saatlik_ucret = 50
+    if toplam_çalişma_saati <= 40:
+        maaş= toplam_çalişma_saati * saatlik_ucret
+    else:
+        normal_çalişma_saati=40
+        fazla_mesai_saati = toplam_çalişma_saati - 40
+        maaş = normal_çalişma_saati * saatlik_ucret + fazla_mesai_saati * (saatlik_ucret * 1,5)
+    return maaş 
+def hesaplamakomisyon(aylik_satiş):
+    sabit_maaş=500
+    komisyon_orani = 0.05
+    komisyon = aylik_satiş * komisyon_orani
+    maaş = sabit_maaş + komisyon
+    return maaş
+
+while True:
+    odeme_kodu = int(input("Odeme Kodu Girin 1 Saatlik 2 Komisyonlu: "))
+    if odeme_kodu == 1:
+        calisma_saati = int(input("Toplam Çalışma Saatinizi Giriniz: "))
+        maaş = hesaplamasaatlik(calisma_saati)
+        print("Maaşınız",maaş)
+        break
+    elif odeme_kodu == 2:
+        aylik_satis = int(input("Aylık Satış Miktarınızı Girin: "))
+        maaş=hesaplamakomisyon(aylik_satis):
+        print("maaşınız",maaş)
+        break
+    else:
+        print("Geçersiz Kod")
+
+
+"""""
+def sicaklik_hesaplama(sicaklik_listesi):
+    ortalma = {(-20)-(0,
+               (0)-(20)
+               (20)-(40)       
+                      )}
+    for sicaklik in sicaklik_listesi:
+        if sicaklik (-20) <= (0):
+            ortalma =["(-20)-(0)"] 
+        elif sicaklik (0) <= (20):
+            ortalma=["(0)"]            
+"""""""""       
+
+def sicaklik_araligi(sicakliklar):
+    sicaklik_araliklari = {
+        "(-20) - (0)":0,
+        "(0) - (20)":0,
+        "(20) - (40)":0
+    }
+    
+    for sicaklik in sicakliklar:
+        if -20 <= sicaklik < 0:
+            sicaklik_araliklari["(-20) - (0)"] += 1 
+        elif 0 <= sicaklik < 20:
+            sicaklik_araliklari["(0) - (20)"] += 1 
+        elif 20 <= sicaklik < 40:
+            sicaklik_araliklari["(20) - (40)"] += 1 
+
+    for aralik,sayi in sicaklik_araliklari.items():
+        print(aralik,"arasında",sayi"tane sıcaklık var")
+    sicaklık_listesi=[5,-15,25,12,30,18,-5,35,-18,8]
+    sicaklik_araligi(sicaklık_listesi)
+
+
+def hesaplamasaatlik (toplam_calisma_saati):
+    saatlik_maas = 50 
+    if toplam_calisma_saati <= 40:
+        maas= toplam_calisma_saati*saatlik_maas
+    else:
+        toplam_calisma_saati=40
+        mesai_saati = toplam_calisma_saati-40
+        maas = toplam_calisma_saati*saatlik_maas +mesai_saati*(saatlik_maas*1.5)
+        return maas
+
+def hesaplamakomisyonu (aylık_satis):
+    sabit_maas = 500 
+    komisyon_oranı = 0.05
+    komisyon = aylık_satis*komisyon_oranı
+    maas = sabit_maas+komisyon
+    return maas
+    
+        
+while True:
+    odeme_kodu = int(input("lutfen odeme kodunuzu seçiniz 1: normal çalışan 2: komisyonlu çalışan"))
+    if odeme_kodu==1:
+        calisma_saati = int(input("çalışma saatinizi giriniz:"))
+        maaş =hesaplamasaatlik(calisma_saati)
+        print("maaş", maaş)
+        break 
+    elif odeme_kodu==2:
+        aylik_satiş = int(input("aylık satiş miktarını giriniz"))
+        maaş= hesaplamakomisyonu(aylik_satiş)
+        print("maaş",maaş)
+        break
+    else:
+        print("geçersiz kod........")
+        
+        
+        
+
