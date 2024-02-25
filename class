@@ -1,0 +1,70 @@
+
+def sayikontrol (sayi):
+    basamak_sayisi= len(set(str(sayi)))
+    if basamak_sayisi ==1:
+        return 1
+    else:
+        return 0 
+
+A = [233,45,777,99999,36,90,88,1,61]
+
+for sayi in A:
+    if sayikontrol(sayi):
+        print(f"{sayi}basamaklar birbirine eşit")
+    else:
+        print(f"{sayi} BASAMAKLAR EŞİT DEGİLDİR")
+              
+
+
+
+class Person:
+    
+    
+    adress= "bilgi yok"
+    
+    
+    def __init__(self,name,lastname):
+        self.name = name
+        self.lastname = lastname
+    def intro(self):
+        print("merhaba ben"+self.ad)
+p1 = Person(name="ali", lastname="koç")
+print(p1)
+print(type(p1))
+print("benim adım",p1.name,"soyadımm",p1.lastname, "adress",p1.adress)
+liste = [10,20,30]
+print(type(liste))
+class Person1:
+    def __init__(self,ad,soyad,adress,dogum_yılı):
+        self.ad=ad
+        self.soyad=soyad
+        self.adress=adress
+        self.dogum_yılı=dogum_yılı
+    def intro(self):
+        print("merhaba ben "+self.ad)
+        print("yaşım",2024-self.dogum_yılı)    
+p2= Person1(ad="lebron",soyad= "james",adress="5k", dogum_yılı=int(2007))
+print(p2)
+print(type(p2))
+print("benim adım",p2.ad, "soyadım",p2.soyad,"adressim",p2.adress,"dogun yılım",p2.dogum_yılı)            
+p2.intro()
+
+class Daire:
+    pi =3.14
+    def __init__(self,yaricap =1):
+        self.yaricap=yaricap
+    def cevre_hesaplama(self):
+        return 2*self.pi*self.yaricap
+    def alan_hesaplama(self):
+        return 2*self.pi*(2**self.yaricap)
+daire = Daire(5)
+print("cevre sonuc:",daire.cevre_hesaplama())
+print("alan sonuc:",daire.alan_hesaplama())       
+
+class Square:
+    def __init__(self,kenar_uzunlugu):
+        self.kenar_uzunlugu= kenar_uzunlugu
+    def alan(self):
+        return self.kenar_uzunlugu*self.kenar_uzunlugu
+kare = Square(4)
+print("alan:",kare.alan())
